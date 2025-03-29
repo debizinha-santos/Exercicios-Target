@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard de Faturamento</title>
+    <style>
+      body {
+        font-family: 'Roboto', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f2f5;
+        color: #333;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 20px 0;
+        color: #4a90e2;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .dash {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .card {
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 20px;
+        width: 30%;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .card h2 {
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        color: #4a90e2;
+      }
+
+      .card p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .card p span {
+        font-size: 1rem;
+        color: #888;
+      }
+      
+      @media (max-width: 768px) {
+        .card {
+          width: 45%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .card {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Faturamento do Mês</h1>
+      <hr />
+      <div class="dash">
+        <div class="card">
+          <h2>Menor faturamento</h2>
+          <p id="menor">Carregando...</p>
+        </div>
+        <div class="card">
+          <h2>Maior faturamento</h2>
+          <p id="maior">Carregando...</p>
+        </div>
+        <div class="card">
+          <h2>Dias com faturamento acima da média</h2>
+          <p id="diasAcima">Carregando...</p>
+        </div>
+      </div>
+    </div>
+    <script src="./Faturamento.js"></script>
+  </body>
+</html>

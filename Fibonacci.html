@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fibonacci</title>
+  </head>
+  <body>
+    <script>
+      let numero1 = 0;
+      let numero2 = 1;
+      let fibonacci = numero1 + ", " + numero2;
+
+      let numDig = prompt("Quantos números da sequência de Fibonacci você quer ver? \nDigite um número e clique no OK." );
+      numDig = parseInt(numDig);
+
+      if (isNaN(numDig) || numDig <= 0) {
+        alert("Você não digitou um número, reinicie e tente novamente digitando um número maior que 0.");
+      } else{
+        
+        for (let contador = 3; contador <= numDig; contador++) {
+          let numero3 = numero1 + numero2;
+        
+          fibonacci += ", " + numero3;
+          numero1 = numero2;
+          numero2 = numero3;
+        }
+
+      if (fibonacci.includes(numDig)) {
+              alert("O número "+numDig+" existe nessa sequência de Fibonacci. \nA sequência é: "+fibonacci+" :)");
+              } else {
+              alert("O número "+numDig+" não existe nessa sequência de Fibonacci. \nA sequência é: "+fibonacci+" :)");
+              }
+            }
+    </script>
+  </body>
+</html>

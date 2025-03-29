@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inverter</title>
+  </head>
+  <body>
+    <script>
+      // Função para inverter os caracteres de uma string
+      function inverterString(str) {
+        let strInvertida = "";
+        for (let inverter = str.length - 1; inverter >= 0; inverter--) {
+          strInvertida += str[inverter];
+        }
+        return strInvertida;
+      }
+
+      let palavraDigitada = prompt(
+        "Digite uma palavra ou frase para inverter: "
+      );
+      let palavraInvertida = inverterString(palavraDigitada);
+
+      alert(
+        "A palavra ou frase digitada foi: " +
+          palavraDigitada +
+          "\nE essa palavra invertida é: " +
+          palavraInvertida
+      );
+    </script>
+  </body>
+</html>
